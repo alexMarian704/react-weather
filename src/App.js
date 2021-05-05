@@ -1,20 +1,20 @@
 import './css/index.css'
-import useFetch from './hooks/useFetch'
-import { useState } from 'react'
-import urls from './data/data'
-import Test from './components/test';
+import Main from './components/Main';
+import { Route , BrowserRouter , Switch} from 'react-router-dom'
+import Nav from './components/Nav';
 
 function App() {
-  const [test, setTest] = useState(1);
-  const { firstUrl } = urls('Bucharest')
-  const { data , isLoading , error } = useFetch(test, firstUrl);
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      {data && <h2>{data.coord.lat}</h2>}
-      {data && <Test render={data}/>}
-      <button onClick={() => { setTest(test + 1) }}>{test}</button>
+      <Nav />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <Main />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

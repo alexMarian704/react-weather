@@ -6,4 +6,17 @@
 h1 {
   color: black;
 }
+
+.loadingGif {
+  position: absolute;
+  width: 140px;
+  border-radius: 20px;
+}
+
+.gifContainer {
+  width: 140px;
+  margin: auto;
+  position: relative;
+  background-color: red;
+}
 /*# sourceMappingURL=index.css.map */
