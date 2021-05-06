@@ -12,7 +12,7 @@ const Daily = ({render , city}) => {
 
     if(!error){
     return (
-        <div>
+        <div className="daily-container">
            {data && data.cod != 400 && !error && data.daily.map((temp , i)=>{
                return(
                 <Week temp={temp} key={i}/>
@@ -23,7 +23,7 @@ const Daily = ({render , city}) => {
     }else{
         return(
             <div>
-                <h2>{error}</h2>
+                <h2 className="textTitle">{error}</h2>
             </div>
         )
     }

@@ -23,21 +23,20 @@ const Main = () => {
         return (
             <div>
                 <form onSubmit={searchCity}>
+                    <button className="search-but"><FontAwesomeIcon icon={faSearch} /></button>
                     <input type="text" name="city" onChange={(e) => setInput(e.target.value)} value={input} />
-                    <button><FontAwesomeIcon icon={faSearch} /></button>
                 </form>
                 {isLoading && <div className="gifContainer">
                     <img src={loadingGif} className="loadingGif" />
                 </div>}
-                {data && data.cod < 301 && !error && <h2>{data.coord.lat}</h2>}
                 {data && data.cod < 301 && !error && <Daily render={data} city={city} />}
-                {data && data.message && <h3>{data.message}</h3>}
+                {data && data.message && <h3 className="textTitle">{data.message}</h3>}
             </div>
         )
     } else {
         return (
             <div>
-                <h2>{error}</h2>
+                <h2 className="textTitle">{error}</h2>
             </div>
         )
     }

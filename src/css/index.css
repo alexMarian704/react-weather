@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 * {
   font-family: 'Baloo 2', cursive;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  background-color: #121212;
 }
 
 h1 {
-  color: black;
+  color: #d40fdb;
+  font-size: calc(1.6rem + 0.3vw);
 }
 
 .loadingGif {
@@ -18,5 +27,93 @@ h1 {
   margin: auto;
   position: relative;
   background-color: red;
+}
+
+input {
+  outline: none;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  margin-left: 5px;
+  color: whitesmoke;
+  font-size: calc(1.2rem + 0.3vw);
+}
+
+.search-but {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 15%;
+  border-radius: 10px;
+  color: #d40fdb;
+  font-size: calc(1.1rem + 0.3vw);
+}
+
+form {
+  border-bottom: 3px solid #d40fdb;
+  display: block;
+  width: 20vw;
+  min-width: 220px;
+  max-width: 400px;
+  border-radius: 1px;
+}
+
+.daily {
+  background-color: #222121;
+  width: 20vw;
+  min-width: 230px;
+  height: 130px;
+  max-width: 280px;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 2.6px 1px rgba(114, 114, 114, 0.3);
+          box-shadow: 0px 0px 2.6px 1px rgba(114, 114, 114, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text {
+  color: #d40fdb;
+  font-size: 20px;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+}
+
+.textTitle {
+  color: whitesmoke;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+}
+
+.daily-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60vw;
+  height: 100%;
+}
+
+.text-icon {
+  color: whitesmoke;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
 }
 /*# sourceMappingURL=index.css.map */
