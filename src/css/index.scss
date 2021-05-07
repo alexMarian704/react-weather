@@ -104,3 +104,38 @@ form{
     @include textCss();
     font-size: 26px;
 }
+
+.sun-text{
+    color: $colorTheme;
+    @include textCss();
+    font-size: calc(20px + 0.3vw);
+}
+
+.sun-icon-sun{
+    @include textCss();
+    font-size: calc(55px + 0.3vw);
+    color: rgb(255, 217, 0)
+}
+
+.sun-icon-moon{
+    @include textCss();
+    font-size: calc(55px + 0.3vw);
+    color: rgb(139, 139, 139);
+}
+.temperature{
+    color: $colorTheme;
+    @include textCss();
+    font-size: calc(33px + 0.5vw);
+}
+
+.city{
+    @include textCss();
+    color: whitesmoke;
+    font-size: calc(30px + 0.5vw);
+}
+
+#date{
+    @include textCss();
+    color: rgb(144, 144, 144);
+    font-size: calc(20px + 0.5vw);
+}

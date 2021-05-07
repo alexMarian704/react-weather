@@ -6,6 +6,7 @@ import Daily from './Daily';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import loadingGif from '../image/loading2.gif'
+import Currect from './Currect';
 
 const Main = () => {
     const [input, setInput] = useState('');
@@ -29,6 +30,7 @@ const Main = () => {
                 {isLoading && <div className="gifContainer">
                     <img src={loadingGif} className="loadingGif" />
                 </div>}
+                {data && data.cod < 301 && !error && <Currect render={data} city={city}/>}
                 {data && data.cod < 301 && !error && <Daily render={data} city={city} />}
                 {data && data.message && <h3 className="textTitle">{data.message}</h3>}
             </div>
