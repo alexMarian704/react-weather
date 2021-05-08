@@ -48,6 +48,7 @@ input{
     border-radius: 10px;
     color: $colorTheme;
     font-size: calc(1.1rem + 0.3vw);
+    outline: none;
 }
 
 form{
@@ -138,4 +139,9 @@ form{
     @include textCss();
     color: rgb(144, 144, 144);
     font-size: calc(20px + 0.5vw);
+}
+
+a{
+    text-decoration: none;
+    color: $colorTheme;
 }

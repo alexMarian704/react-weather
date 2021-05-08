@@ -1,24 +1,32 @@
-import { useState } from 'react'
 import urls from '../data/data'
 import useFetch from '../hooks/useFetch'
 import Week from './Week'
+import { useParams, useHistory } from 'react-router-dom'
 
-const Daily = ({ render, city }) => {
-    console.log(render)
-    const { secondUrl } = urls(city, render.coord.lon, render.coord.lat)
-    const { data, isLoading, error } = useFetch(render.coord.lon, secondUrl)
+const Daily = () => {
+    const { lon, lat, city } = useParams();
+    const { secondUrl } = urls(city, lon, lat)
+    const { data, error } = useFetch(lon, secondUrl)
+    const history = useHistory();
     if (data)
         console.log(data)
 
+    const back = () => {
+        history.go(-1)
+    }
+
     if (!error) {
         return (
-            <div className="daily-container">
-                {data && data.cod != 400 && !error && data.daily.map((temp, i) => {
-                    if (i > 0)
-                        return (
-                            <Week temp={temp} key={i} />
-                        )
-                })}
+            <div>
+                <button onClick={back}>Back</button>
+                <div className="daily-container">
+                    {data && data.cod < 301 && !error && data.daily.map((temp, i) => {
+                        if (i > 0)
+                            return (
+                                <Week temp={temp} key={i} />
+                            )
+                    })}
+                </div>
             </div>
         )
     } else {
