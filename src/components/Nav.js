@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Nav = () => {
     return (
         <nav>
-            <h1><NavLink to="/">Know weather <span><FontAwesomeIcon icon={faCloud} /></span></NavLink></h1>
+            <h1 className="nav-title"><NavLink to="/">Know weather <span><FontAwesomeIcon icon={faCloud} /></span></NavLink></h1>
         </nav>
     )
 }

@@ -52,12 +52,14 @@ input {
 }
 
 form {
-  border-bottom: 3px solid #d40fdb;
+  margin: auto;
+  border: 2.8px solid #d40fdb;
   display: block;
   width: 20vw;
   min-width: 220px;
   max-width: 400px;
   border-radius: 1px;
+  border-radius: 20px;
 }
 
 .daily {
@@ -238,5 +240,25 @@ a {
 
 #hour-temp {
   color: #d40fdb;
+}
+
+.back-but {
+  width: 50px;
+  outline: none;
+  color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.nav-title {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+nav {
+  border-bottom: 2px solid #d40fdb;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=index.css.map */

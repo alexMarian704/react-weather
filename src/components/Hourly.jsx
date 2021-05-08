@@ -3,6 +3,7 @@ import urls from '../data/data'
 import useFetch from '../hooks/useFetch'
 import loadingGif from '../image/loading2.gif'
 import Hour from './Hour'
+import { motion } from 'framer-motion'
 
 const Hourly = ({ render, city }) => {
     const { secondUrl } = urls(city, render.coord.lon, render.coord.lat)
@@ -12,14 +13,19 @@ const Hourly = ({ render, city }) => {
 
     if (data && !error && render) {
         return (
-            <div className="hours-container">
+            <motion.div className="hours-container"
+                animate={{opacity:1}}
+                exit={{opacity:1}}
+                initial={{opacity:0}}
+                transition={{duration:1.5}}
+            >
                 {data.hourly.map((hour , i)=>{
                     if(i>=0 && i<=24)
                     return(
                         <Hour data={hour} key={i}/>
                     )
                 })}
-            </div>
+            </motion.div>
         )
     } else if (!error) {
         return (

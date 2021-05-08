@@ -52,13 +52,14 @@ input{
 }
 
 form{
-    //background-color: rgb(255, 255, 255);
-    border-bottom: 3px solid $colorTheme;
+    margin: auto;
+    border: 2.8px solid $colorTheme;
     display: block;
     width: 20vw;
     min-width: 220px;
     max-width: 400px;
     border-radius: 1px;
+    border-radius: 20px;
 }
 
 .daily{
@@ -208,4 +209,24 @@ a{
 
 #hour-temp{
     color: $colorTheme;
+}
+
+.back-but{
+    width: 50px;
+    outline: none;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.nav-title{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+nav{
+    border-bottom: 2px solid $colorTheme;
+    margin-bottom: 40px;
 }
