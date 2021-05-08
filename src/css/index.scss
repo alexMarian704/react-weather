@@ -63,18 +63,18 @@ form{
 
 .daily{
     background-color: rgb(34, 33, 33);
-    width: 20vw;
+    width: 80vw;
     min-width: 230px;
     height: 130px;
-    max-width: 280px;
+    max-width: 1580px;
     border-radius: 8px;
-    margin-left: 10px;
     margin-top: 15px;
     box-shadow: 0px 0px 2.6px 1px rgba(114, 114, 114, 0.3);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-left: 4px solid $colorTheme;
 }
 
 @mixin textCss {
@@ -83,65 +83,129 @@ form{
     text-align: center;
 }
 
+@mixin firstPage {
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
 .text{
     color: $colorTheme;
-    font-size: 20px;
+    font-size: calc(20px + 0.53vw);
     @include textCss();
 }
 .textTitle{
     color: whitesmoke;
     @include textCss();
+    font-size: calc(20px + 0.53vw);
 }
 
 .daily-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 60vw;
+    width: 90vw;
     height:100%;
+    margin: auto;
 }
 .text-icon{
     color: whitesmoke;
     @include textCss();
-    font-size: 26px;
+    font-size: calc(23px + 0.53vw);
+}
+
+#flex-display{
+    width: 50%;
+    text-align: center;
 }
 
 .sun-text{
     color: $colorTheme;
-    @include textCss();
+    @include firstPage();
     font-size: calc(20px + 0.3vw);
 }
 
 .sun-icon-sun{
-    @include textCss();
+    @include firstPage();
     font-size: calc(55px + 0.3vw);
     color: rgb(255, 217, 0)
 }
 
 .sun-icon-moon{
-    @include textCss();
+    @include firstPage();
     font-size: calc(55px + 0.3vw);
     color: rgb(139, 139, 139);
 }
 .temperature{
     color: $colorTheme;
-    @include textCss();
+    @include firstPage();
     font-size: calc(33px + 0.5vw);
 }
 
 .city{
-    @include textCss();
+    @include firstPage();
     color: whitesmoke;
     font-size: calc(30px + 0.5vw);
 }
 
 #date{
-    @include textCss();
+    @include firstPage();
     color: rgb(144, 144, 144);
     font-size: calc(20px + 0.5vw);
 }
 
 a{
     text-decoration: none;
+    color: $colorTheme;
+}
+
+@media (max-width:600px) {
+    .daily-container{
+        width: 99%;
+    }
+    .daily{
+        width: 97%;
+    }
+}
+
+.hours-container{
+    width: 100%;
+    margin-top: 30px;
+    height: calc(120px + 1.3vw);
+    background-color: rgb(85, 85, 85);
+    display: inline-flex;
+    overflow-x: scroll;
+    align-items: center;
+    overflow-y: hidden;
+    border-radius: 2px;
+    box-shadow: 0px 0px 6px 2px rgba(172, 172, 172, 0.11);
+}
+
+.hours-container::-webkit-scrollbar{
+    background-color: rgb(44, 44, 44);
+    height: 4px;
+}
+.hours-container::-webkit-scrollbar-track{
+    background-color: rgb(79, 79, 80);
+}
+
+.hours-container::-webkit-scrollbar-thumb{
+    background-color: rgb(235, 235, 235);
+}
+
+.hour-container{
+    min-width: 120px;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.hour-text{
+    @include firstPage();
+    font-size: calc(15px + 0.2vw);
+}
+
+#hour-temp{
     color: $colorTheme;
 }

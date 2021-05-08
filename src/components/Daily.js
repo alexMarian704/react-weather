@@ -20,7 +20,7 @@ const Daily = () => {
             <div>
                 <button onClick={back}>Back</button>
                 <div className="daily-container">
-                    {data && data.cod < 301 && !error && data.daily.map((temp, i) => {
+                    {data && (data.cod < 301 || data.cod === undefined) && !error && data.daily.map((temp, i) => {
                         if (i > 0)
                             return (
                                 <Week temp={temp} key={i} />
