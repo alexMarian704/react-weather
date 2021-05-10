@@ -167,6 +167,11 @@ a{
     .daily{
         width: 97%;
     }
+    .nav-title{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
 }
 
 .hours-container{
@@ -193,6 +198,20 @@ a{
 .hours-container::-webkit-scrollbar-thumb{
     background-color: rgb(235, 235, 235);
 }
+
+::-webkit-scrollbar{
+    background-color: rgb(44, 44, 44);
+    width: 4px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(185, 185, 185);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $colorTheme;
+}
+
 
 .hour-container{
     min-width: 120px;
@@ -228,5 +247,60 @@ a{
 
 nav{
     border-bottom: 2px solid $colorTheme;
-    margin-bottom: 40px;
+}
+
+@keyframes rotate{
+    to{transform: rotate(360deg);}
+}
+
+.main-sun{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: calc(100px + 7vw);
+    color: rgb(246, 212, 16);
+    animation: rotate 7s linear infinite;
+}
+.week-link{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: calc(20px + 0.1vw);
+    border-bottom: 2px solid $colorTheme;
+    font-weight: 800;
+    margin-bottom: 20px;
+    transition: all 400ms;
+}
+
+.week-link:hover{
+    background-color: whitesmoke;
+    transform: scale(1.05);
+}
+
+#main{
+    margin-top: 20px;
+    min-height: 86vh;
+}
+
+#daily-main{
+    margin-top: 20px;
+    min-height: 91vh;
+}
+
+footer{
+    background-color: grey;
+    height: 100px;
+}
+
+footer h2{
+    @include textCss();
+}
+
+footer a{
+    display: block;
+    @include textCss();
+}
+
+#footer-render-main{
+    min-height: 89vh;
 }

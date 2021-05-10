@@ -20,7 +20,7 @@ const Daily = () => {
 
     if (!error) {
         return (
-            <div>
+            <div id="daily-main">
                 <button onClick={back} className="back-but"><FontAwesomeIcon icon={faArrowLeft}/></button>
                 <motion.div className="daily-container"
                     animate={{ opacity: 1 }}

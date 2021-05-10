@@ -4,6 +4,7 @@ import { Route , BrowserRouter , Switch} from 'react-router-dom'
 import Nav from './components/Nav';
 import Daily from './components/Daily';
 import Currect from './components/Currect';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Currect />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

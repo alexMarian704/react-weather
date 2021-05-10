@@ -19,7 +19,9 @@ const Currect = () => {
 
     if (data && !error && data.cod < 301) {
         return (
-            <div>
+            <div id="footer-render-main">
+                {data && data.cod < 301 && !error && <NavLink className="week-link" to={`/week/${data.coord.lon}/${data.coord.lat}/${city}`}>Week</NavLink>}
+
                 <button onClick={() => { history.go(-1) }} className="back-but"><FontAwesomeIcon icon={faArrowLeft} /></button>
 
                 <motion.div
@@ -28,7 +30,6 @@ const Currect = () => {
                     initial={{ opacity: 0 }}
                     transition={{ duration: 1.3 }}
                 >
-                    {data && data.cod < 301 && !error && <NavLink to={`/week/${data.coord.lon}/${data.coord.lat}/${city}`}>Week</NavLink>}
 
                     <h2 className="temperature">{data.main.temp}&#x2103;</h2>
                     <h2 className="city">{data.name}</h2>
@@ -52,8 +53,8 @@ const Currect = () => {
     } else if (data && data.message !== undefined) {
         return (
             <div>
-                <h1>City not found</h1>
-                <NavLink to="/">Back to search page</NavLink>
+                <h1 className="city">City not found</h1>
+                <NavLink to="/" className="city">Back to search page</NavLink>
             </div>
         )
     } else {

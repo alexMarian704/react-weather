@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch , faSun } from '@fortawesome/free-solid-svg-icons'
 import {useHistory} from 'react-router-dom'
 
 const Main = () => {
@@ -13,12 +13,13 @@ const Main = () => {
         history.push(`/${input}`)
     }
         return (
-            <div>
+            <div id="main">
                 <form onSubmit={searchCity}>
                     <button className="search-but"><FontAwesomeIcon icon={faSearch} /></button>
                     <input type="text" name="city" onChange={(e) => setInput(e.target.value)} value={input} />
                 </form>
                 <h2 className="city">Search a city</h2>
+                <p className="main-sun"><FontAwesomeIcon icon={faSun} className="main-sun-icon"/></p>
             </div>
         )
 }
