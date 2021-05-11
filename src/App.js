@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Daily from './components/Daily';
 import Currect from './components/Currect';
 import Footer from './components/Footer';
+import Page404 from './components/Page404';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/:city">
             <Currect />
           </Route>
+          <Route path="*" component={Page404}/>
         </Switch>
         <Footer />
       </BrowserRouter>
