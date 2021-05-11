@@ -11,8 +11,6 @@ const Daily = () => {
     const { secondUrl } = urls(city, lon, lat)
     const { data, error } = useFetch(lon, secondUrl)
     const history = useHistory();
-    if (data)
-        console.log(data)
 
     const back = () => {
         history.go(-1)
@@ -39,7 +37,7 @@ const Daily = () => {
         )
     } else {
         return (
-            <div>
+            <div id="footer-render-main">
                 <h2 className="textTitle">{error}</h2>
             </div>
         )

@@ -16,7 +16,7 @@ const Main = () => {
             <div id="main">
                 <form onSubmit={searchCity}>
                     <button className="search-but"><FontAwesomeIcon icon={faSearch} /></button>
-                    <input type="text" name="city" onChange={(e) => setInput(e.target.value)} value={input} />
+                    <input type="text" name="city" onChange={(e) => setInput(e.target.value)} value={input} autoComplete="off"/>
                 </form>
                 <h2 className="city">Search a city</h2>
                 <p className="main-sun"><FontAwesomeIcon icon={faSun} className="main-sun-icon"/></p>

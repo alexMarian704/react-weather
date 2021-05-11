@@ -8,8 +8,6 @@ import { motion } from 'framer-motion'
 const Hourly = ({ render, city }) => {
     const { secondUrl } = urls(city, render.coord.lon, render.coord.lat)
     const { data, isLoading, error } = useFetch(render.coord.lon, secondUrl)
-    if (data)
-        console.log(data)
 
     if (data && !error && render) {
         return (

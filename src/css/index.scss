@@ -274,7 +274,6 @@ nav{
 
 .week-link:hover{
     background-color: whitesmoke;
-    transform: scale(1.05);
 }
 
 #main{
@@ -285,6 +284,7 @@ nav{
 #daily-main{
     margin-top: 20px;
     min-height: 91vh;
+    margin-bottom: 50px;
 }
 
 footer{
@@ -303,4 +303,28 @@ footer a{
 
 #footer-render-main{
     min-height: 89vh;
+}
+
+#main-wind{
+    height: 115px;
+}
+
+.other-data-container{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.other-data span{
+    color: $colorTheme
+}
+
+.other-data{
+    @include textCss();
+    font-size: calc(24px + 0.3vw);
+    color: whitesmoke;
+}
+
+#back-link{
+    color: $colorTheme;
+    text-decoration: underline;
 }

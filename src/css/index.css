@@ -317,8 +317,6 @@ nav {
 
 .week-link:hover {
   background-color: whitesmoke;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 #main {
@@ -329,6 +327,7 @@ nav {
 #daily-main {
   margin-top: 20px;
   min-height: 91vh;
+  margin-bottom: 50px;
 }
 
 footer {
@@ -351,5 +350,31 @@ footer a {
 
 #footer-render-main {
   min-height: 89vh;
+}
+
+#main-wind {
+  height: 115px;
+}
+
+.other-data-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.other-data span {
+  color: #d40fdb;
+}
+
+.other-data {
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  font-size: calc(24px + 0.3vw);
+  color: whitesmoke;
+}
+
+#back-link {
+  color: #d40fdb;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=index.css.map */

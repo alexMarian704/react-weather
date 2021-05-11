@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTint, faCloud, faSun, faCloudRain, faSnowflake , faPooStorm } from '@fortawesome/free-solid-svg-icons'
 
 const Hour = ({ data }) => {
-    console.log(data)
     return (
         <div className="hour-container">
             <p className="hour-text"><FontAwesomeIcon icon={faTint} style={{

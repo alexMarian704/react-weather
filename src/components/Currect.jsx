@@ -8,14 +8,14 @@ import loadingGif from '../image/loading2.gif'
 import { useHistory } from 'react-router-dom'
 import Hourly from './Hourly';
 import { motion } from 'framer-motion'
+import Wind from './Wind';
+import OtherData from './OtherData';
 
 const Currect = () => {
     const { city } = useParams();
     const history = useHistory();
     const { firstUrl } = urls(city)
     const { data, isLoading, error } = useFetch(city, firstUrl);
-    if (data)
-        console.log(data)
 
     if (data && !error && data.cod < 301) {
         return (
@@ -47,19 +47,26 @@ const Currect = () => {
                 </motion.div>
                 <div>
                     <Hourly render={data} city={city} />
+                    <br />
+                    <br />
+                    <Wind render={data} city={city} />
+                    <br />
+                    <OtherData data={data}/>
                 </div>
             </div>
         )
     } else if (data && data.message !== undefined) {
         return (
-            <div>
+            <div id="footer-render-main">
                 <h1 className="city">City not found</h1>
-                <NavLink to="/" className="city">Back to search page</NavLink>
+                <NavLink to="/" className="city" style={{
+                    display:'block',
+                }} id="back-link">Back to search page</NavLink>
             </div>
         )
     } else {
         return (
-            <div className="gifContainer">
+            <div className="gifContainer" id="footer-render-main">
                 <img src={loadingGif}
                     className="loadingGif" />
             </div>
