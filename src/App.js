@@ -23,7 +23,6 @@ function App() {
           <Route path="/:city">
             <Currect />
           </Route>
-          <Route path="*" component={Page404}/>
         </Switch>
         <Footer />
       </BrowserRouter>
